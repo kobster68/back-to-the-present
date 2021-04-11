@@ -7,13 +7,17 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
 
+    public GameObject fireball;
+
     private float horizontalInput;
     private Rigidbody2D _rb;
     private AudioSource _as;
 
-    private bool isFacingRight = true;
+    public bool isFacingRight = true;
     private bool canJump = true;
     private bool alive = true;
+
+    public bool hasStaff = false;
 
     private void Awake()
     {
@@ -50,6 +54,14 @@ public class PlayerController : MonoBehaviour
                 _rb.velocity = new Vector2(_rb.velocity.x, 15);
                 _as.Play();
                 canJump = false;
+            }
+        }
+        if (Input.GetButtonDown("Fire1"))
+        {
+            if (hasStaff)
+            {
+                _as.Play();
+                Instantiate(fireball, transform.position, Quaternion.identity);
             }
         }
     }
