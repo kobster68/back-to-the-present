@@ -1,0 +1,13 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/contentModel.xml
+/projectSettingsUpdater.xml
+/modules.xml
+/.idea.Back-to-the-Present.iml
+# Datasource local storage ignored files
+/../../../../../../../../../:\Users\Taegan\Documents\GitHub\Back-to-the-Present\.idea\.idea.Back-to-the-Present\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/

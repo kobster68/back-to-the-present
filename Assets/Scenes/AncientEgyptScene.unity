@@ -1768,6 +1768,7 @@ GameObject:
   - component: {fileID: 910280306}
   - component: {fileID: 910280305}
   - component: {fileID: 910280304}
+  - component: {fileID: 910280308}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Enemy
@@ -1809,18 +1810,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.020493448, y: -0.06855363}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2.56, y: 2.56}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.2400616, y: 2.495524}
   m_EdgeRadius: 0
 --- !u!212 &910280306
 SpriteRenderer:
@@ -1862,8 +1863,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fc887d72b76700044a66eff70b7464f8, type: 3}
-  m_Color: {r: 0.1981132, g: 0.17661978, b: 0.17661978, a: 1}
+  m_Sprite: {fileID: -2786839212090050796, guid: 4ac4d7476204b614389df0cb65949a85, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1881,15 +1882,39 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 910280303}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 34.31, y: -1.897, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalPosition: {x: 34.27, y: -1.548, z: 0}
+  m_LocalScale: {x: 0.98402, y: 0.98402, z: 0.49201}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &910280308
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910280303}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7afbc65b5198a7845a170f9534b23644, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1176318350 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9066403395897377707, guid: a077dadd855d2ea429a818c9b83a5315, type: 3}
+  m_PrefabInstance: {fileID: 9066403394855825957}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1176318351 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9066403395897377715, guid: a077dadd855d2ea429a818c9b83a5315, type: 3}
   m_PrefabInstance: {fileID: 9066403394855825957}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1314589242
@@ -1905,6 +1930,7 @@ GameObject:
   - component: {fileID: 1314589247}
   - component: {fileID: 1314589246}
   - component: {fileID: 1314589245}
+  - component: {fileID: 1314589248}
   m_Layer: 0
   m_Name: StaffBaseSized
   m_TagString: Untagged
@@ -1952,7 +1978,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7ac104b8d92ab6f45a5d7bfc1afff537, type: 3}
+  m_Sprite: {fileID: 2816014259476764716, guid: 50f2956dc5b4c73469749e71d875fbe0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1989,6 +2015,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e334f8dc8f3ed1f4798ec8f2452de101, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  staffPickup:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1176318351}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: PlayerIdleStaff
+          m_BoolArgument: 0
+        m_CallState: 2
   player: {fileID: 1176318350}
 --- !u!82 &1314589246
 AudioSource:
@@ -2103,7 +2144,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.28, y: 1.28}
     newSize: {x: 1.28, y: 1.28}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2112,6 +2153,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &1314589248
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1314589242}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: daddbde3a85a6924299330e86f809c38, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1542058538
 GameObject:
   m_ObjectHideFlags: 0
@@ -14820,6 +14880,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9066403395897377706, guid: a077dadd855d2ea429a818c9b83a5315, type: 3}
+      propertyPath: m_Size.x
+      value: 1.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 9066403395897377706, guid: a077dadd855d2ea429a818c9b83a5315, type: 3}
+      propertyPath: m_Size.y
+      value: 2.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 9066403395897377706, guid: a077dadd855d2ea429a818c9b83a5315, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1851136465403827398, guid: 1f55322480575f541854d76e3f4b99ff, type: 3}
+    - target: {fileID: 9066403395897377706, guid: a077dadd855d2ea429a818c9b83a5315, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9066403395897377707, guid: a077dadd855d2ea429a818c9b83a5315, type: 3}
       propertyPath: m_Name
       value: Player
@@ -14828,6 +14904,26 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 9066403395897377712, guid: a077dadd855d2ea429a818c9b83a5315, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 1.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 9066403395897377712, guid: a077dadd855d2ea429a818c9b83a5315, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 2.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 9066403395897377712, guid: a077dadd855d2ea429a818c9b83a5315, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 9066403395897377712, guid: a077dadd855d2ea429a818c9b83a5315, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 9066403395897377716, guid: a077dadd855d2ea429a818c9b83a5315, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 7ecf0b7169ff3e849b0fe15239af58dc, type: 2}
     - target: {fileID: 9066403395897377717, guid: a077dadd855d2ea429a818c9b83a5315, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -14872,9 +14968,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9066403395897377718, guid: a077dadd855d2ea429a818c9b83a5315, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 1.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 9066403395897377718, guid: a077dadd855d2ea429a818c9b83a5315, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 2.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 9066403395897377718, guid: a077dadd855d2ea429a818c9b83a5315, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 9066403395897377718, guid: a077dadd855d2ea429a818c9b83a5315, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2.56
+      objectReference: {fileID: 0}
     - target: {fileID: 9066403395897377719, guid: a077dadd855d2ea429a818c9b83a5315, type: 3}
       propertyPath: fireball
       value: 
       objectReference: {fileID: 4386129078465548921, guid: 3a6f29112dc10584784b5b1145cc922a, type: 3}
+    - target: {fileID: 9066403395897377719, guid: a077dadd855d2ea429a818c9b83a5315, type: 3}
+      propertyPath: staffPickup.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9066403395897377719, guid: a077dadd855d2ea429a818c9b83a5315, type: 3}
+      propertyPath: staffPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9066403395897377719, guid: a077dadd855d2ea429a818c9b83a5315, type: 3}
+      propertyPath: staffPickup.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a077dadd855d2ea429a818c9b83a5315, type: 3}

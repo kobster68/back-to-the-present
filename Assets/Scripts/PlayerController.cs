@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
 
+    
+    
     public GameObject fireball;
 
     private float horizontalInput;
