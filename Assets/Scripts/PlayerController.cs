@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     
     
     public GameObject fireball;
+    private Animator _anim;
 
     private float horizontalInput;
     private Rigidbody2D _rb;
@@ -25,6 +26,7 @@ public class PlayerController : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody2D>();
         _as = GetComponent<AudioSource>();
+        _anim = GetComponent<Animator>();
     }
     private void Update()
     {
@@ -34,6 +36,15 @@ public class PlayerController : MonoBehaviour
 
         if (transform.position.y < -5)
             KillPlayer();
+
+        if (Mathf.Abs(_rb.velocity.x) > 0.2)
+        {
+            _anim.SetBool ("isRun", true);
+        }
+        else
+        {
+            _anim.SetBool ("isRun", false);
+        }
 
         horizontalInput = Input.GetAxis("Horizontal");
         if (horizontalInput > 0)
