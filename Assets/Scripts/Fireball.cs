@@ -16,17 +16,17 @@ public class Fireball : MonoBehaviour
 
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if(isFacingRight)
         {
 
-            transform.position = new Vector3(transform.position.x + 0.01f, transform.position.y, transform.position.z);
+            transform.position = new Vector3(transform.position.x + 0.20f, transform.position.y, transform.position.z);
             GetComponent<SpriteRenderer>().flipX = false;
 
         } else
         {
-            transform.position = new Vector3(transform.position.x - 0.01f, transform.position.y, transform.position.z);
+            transform.position = new Vector3(transform.position.x - 0.20f, transform.position.y, transform.position.z);
             GetComponent<SpriteRenderer>().flipX = true;
         }
     }

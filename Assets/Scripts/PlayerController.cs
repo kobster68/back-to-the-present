@@ -7,8 +7,6 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
 
-    
-    
     public GameObject fireball;
     private Animator _anim;
 
@@ -97,11 +95,7 @@ public class PlayerController : MonoBehaviour
     {
         canJump = true;
     }
-    private void OnTriggerExit2D(Collider2D col)
-    {
-        canJump = false;
-    }
-    void KillPlayer(GameObject killer)
+    public void KillPlayer(GameObject killer)
     {
         Invoke("LoadLevel", 1f);
         GetComponent<SpriteRenderer>().color = Color.red;

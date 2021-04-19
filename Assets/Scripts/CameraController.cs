@@ -16,9 +16,9 @@ public class CameraController : MonoBehaviour
     {
         cameraY = 1.5f;
 
-        if (player.transform.position.y > 5)
+        if (player.transform.position.y > 3)
         {
-            cameraY = player.transform.position.y - 3.5f;
+            cameraY = player.transform.position.y - 1.5f;
         }
         this.transform.position = new Vector3(player.transform.position.x, cameraY, this.transform.position.z);
 
