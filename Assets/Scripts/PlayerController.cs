@@ -43,6 +43,24 @@ public class PlayerController : MonoBehaviour
         {
             _anim.SetBool ("isRun", false);
         }
+        
+        if (_rb.velocity.y > 0.2)
+        {
+            _anim.SetBool ("isMovingUp", true);
+        }
+        else
+        {
+            _anim.SetBool ("isMovingUp", false);
+        }
+        
+        if (_rb.velocity.y < -0.2)
+        {
+            _anim.SetBool ("isMovingDown", true);
+        }
+        else
+        {
+            _anim.SetBool ("isMovingDown", false);
+        }
 
         horizontalInput = Input.GetAxis("Horizontal");
         if (horizontalInput > 0)
