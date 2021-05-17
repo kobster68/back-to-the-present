@@ -14,6 +14,6 @@ public class TimeCrystal : MonoBehaviour
     }
     void LoadLevel()
     {
-        SceneManager.LoadScene("AncientEgyptScene");
+        SceneManager.LoadScene("MainMenu");
     }
 }
